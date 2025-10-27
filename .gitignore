@@ -1,0 +1,59 @@
+# ========================
+# 忽略编译产物
+# ========================
+cmake-build-debug/
+cmake-build-release/
+build/
+out/
+dist/
+
+# 编译生成的文件
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# CMake 自动生成的文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+compile_commands.json
+
+# ========================
+# 忽略 IDE 配置（CLion / IntelliJ）
+# ========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# CLion 特有的缓存和设置
+cmake-build-*/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# ========================
+# 其他临时文件
+# ========================
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ========================
+# 可执行文件（如果你自己命名了可执行文件）
+# ========================
+# 示例：如果你的程序叫 myapp.exe 或 main
+# 取消下面这行的注释即可
+# main
+# myapp
