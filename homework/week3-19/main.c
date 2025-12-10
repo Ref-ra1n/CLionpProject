@@ -10,7 +10,7 @@ Output
 每组测试数据只要求输出一行，这一行含有m+n个来自集合A和集合B中的元素。
 结果依旧是非递减的。每个整数间用一个空格隔开。*/
 int main() {
-    int m,n;
+    /*int m,n;
     while(scanf("%d",&m)==1){
         int LA[m];
         for (int i = 0; i < m; ++i) {
@@ -39,9 +39,53 @@ int main() {
             }
         }
         for (int i = 0; i < m + n; ++i) {
-            printf("%d ",LC[i]);
+            if(i == 0){
+                printf("%d",LC[i]);
+            } else{
+                printf(" %d",LC[i]);
+            }
         }
+        printf("\n");
+    }*/
+    int i,j,m,n,k;
+    int LA[100],LB[100],LC[200];
+    while(scanf("%d",&m)==1){
+        for (int l = 0; l < m; ++l) {
+            scanf("%d",&LA[l]);
+        }
+        scanf("%d",&n);
+        for (int l = 0; l < n; ++l) {
+            scanf("%d",&LB[l]);
+        }
+        i = j = k = 0;
+        while ( i<m && j<n) {
+            if(LA[i] <= LB[j]){
+                LC[k] = LA[i];
+                ++k,++i;
+            } else{
+                LC[k] = LB[j];
+                ++k,++j;
+            }
+        }
+        //一个数组已经全部排完，直接按序排入另一个数组
+        if(i<m){
+            for (; i < m; ++i,++k) {
+                LC[k]  = LA[i];
+            }
+        }
+        if(j<n){
+            for (; j < n; ++j,++k) {
+                LC[k]  = LB[j];
+            }
+        }
+        for (int l = 0; l < m + n; ++l) {
+            if(l == 0){
+                printf("%d",LC[l]);
+            } else{
+                printf(" %d",LC[l]);
+            }
+        }
+        printf("\n");
     }
-
     return 0;
 }
