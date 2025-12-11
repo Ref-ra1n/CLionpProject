@@ -7,5 +7,6 @@ int main() {
     p = &i;
     //对指针变量赋值可以修改指针的指向
     //int *p = &i;
+    printf("hi\n");
     return 0;
 }
