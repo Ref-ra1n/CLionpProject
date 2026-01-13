@@ -1,13 +1,27 @@
 #include <stdio.h>
-//输入一行字符串，将其中的小写字母转成大写字母
-int main() {
-    char ch;
-    while (scanf("%c",&ch),ch !='\n'){
-        if(ch >= 'a' && ch <= 'z'){
-            ch -= 32;
-        }
-        printf("%c\n",ch);
+#include <stdlib.h>
+/*int* func(){
+    int arr[] = {1,2,3};
+    for (int i = 0; i < 3; ++i) {
+        printf("func arr[i] = %d\n",arr[i]);
     }
-    printf("\n");
+    return arr;
+}*/
+int* func(){
+    int* arr = (int*)malloc(3* sizeof(int ));
+    arr[0] = 1;
+    arr[1] = 2;
+    arr[2] = 3;
+    for (int i = 0; i < 3; ++i) {
+        printf("func arr[i] = %d\n",arr[i]);
+    }
+    return arr;
+}
+int main() {
+    int *p = func();
+    for (int i = 0; i < 3; ++i) {
+        printf("main p[i] = %d\n",p[i]);
+    }
+    free (p);//避免内存泄露
     return 0;
 }
