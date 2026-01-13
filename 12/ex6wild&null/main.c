@@ -9,9 +9,13 @@ int main() {
     //这是一个野指针
     *p = 100;
     printf("*p = %d\n",*p);*/
-   /*int* p = NULL;
+/*   int* p = NULL;//暂时没有指向要初始化为空指针
+   int i = 101;
+   p = &i;
    *p = 100;*/
-   int* p ;
-    func(*p);
+   int* p = NULL;
+   int i = 1;
+   p = &i;
+    func(p);
     return 0;
 }
