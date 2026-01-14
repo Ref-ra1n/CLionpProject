@@ -13,7 +13,7 @@ int main() {
     for (int i = 0; i < LEN; ++i) {
         scanf("%d",&arr[i]);
     }
-    for (int i = 0; i < LEN; ++i) {
+    for (int j = 0; j < LEN; ++i) {
         for (int i = 0; i < LEN-1; ++i) {
             int tep;
             if(arr[i]>arr[i+1]){
