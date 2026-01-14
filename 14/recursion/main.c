@@ -10,5 +10,5 @@ void func(int i){
 }
 int main() {
     func(4);
-    return 0;
+    return 0;//
 }
