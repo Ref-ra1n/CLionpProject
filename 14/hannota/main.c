@@ -18,6 +18,6 @@ void hanoi(int n,char from,char buffer,char to){
 }
 int main() {
     int n = 5;
-    hanoi(5,'a','b','c');
+    hanoi(2,'a','b','c');
     return 0;//
 }
